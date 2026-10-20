@@ -1,0 +1,31 @@
+Url Completa: http://127.0.0.1:5500/index.html
+Protocolo: http://
+Host: 127.0.0.1
+Puerto: 5500
+Ruta: index.html
+Metodo: GET
+Estado:304 Not Modified
+
+
+Ruta /promociones.html
+Metodo: GET
+Estado:404 Not found
+
+El estado 404 significa no encontrado, el servidor responde que hubo conexión
+exitosa con el servidor, pero no se encuentra la pagina solicitada en la ruta.
+
+Roles
+-HTML:Es el que estructura la pagina web.
+
+Ejemplo: Puede designar el espacio donde se va a mostrar una imagen como un banner
+en la pagina, en el archivo html deja el espacio listo y sube la imagen como tal.
+
+-CSS:Es el encargado de hacer que la pagina web cumpla con una estetica visual
+atractiva para el cliente.
+
+Ejemplo: Mediante CSS le da estilo al banner, configurando colores y a la imagen del banner le da un suavizado en las esquinas con un Border-radius
+
+-JavaScript:Quien se encargará de que el html y css tengan elementos interactivos.
+
+Ejemplo: El banner tendra un efecto que al pasar el mouse sobre el, va a hacer
+zoom.
