@@ -1,3 +1,4 @@
+Dia 1 Reto 1
 Url Completa: http://127.0.0.1:5500/index.html
 Protocolo: http://
 Host: 127.0.0.1
@@ -29,3 +30,19 @@ Ejemplo: Mediante CSS le da estilo al banner, configurando colores y a la imagen
 
 Ejemplo: El banner tendra un efecto que al pasar el mouse sobre el, va a hacer
 zoom.
+
+Dia 1 Reto 4
+
+-------------------------------------+--------------------+----------------------------+------------------------------------------------------------
+| Archivo de Origen                   | Elemento / Destino | Ruta Escrita               | Explicación de la Ruta                                    |
+--------------------------------------+--------------------+----------------------------+-----------------------------------------------------------
+| index.html (Raíz)                   | Logo (img/logo.png)| src="img/logo.png"         | Entra directamente a la carpeta img desde la raíz.        |
+| index.html (Raíz)                   | Página Tarifas     | href="paginas/tarifas.html"| Entra a la carpeta paginas para buscar el archivo.        |
+| index.html (Raíz)                   | Página Reservas    | href="paginas/reservas.html"| Entra a la carpeta paginas para buscar el archivo.       |
+| paginas/tarifas.html (Subcarpeta)   | Logo (img/logo.png)| src="../img/logo.png"      | Sube un nivel (../) para salir de paginas y entra a img.  |
+| paginas/tarifas.html (Subcarpeta)   | Inicio (index.html)| href="../index.html"       | Sube un nivel (../) para llegar a la raíz.                |
+| paginas/tarifas.html (Subcarpeta)   | Página Reservas    | href="reservas.html"       | En la misma carpeta, se llama directamente.               |
+| paginas/reservas.html (Subcarpeta)  | Logo (img/logo.png)| src="../img/logo.png"      | Sube un nivel (../) para salir de paginas y entra a img.  |
+| paginas/reservas.html (Subcarpeta)  | Inicio (index.html)| href="../index.html"       | Sube un nivel (../) para llegar a la raíz.                |
+| paginas/reservas.html (Subcarpeta)  | Página Tarifas     | href="tarifas.html"        | En la misma carpeta, se llama directamente.               |
++-------------------------------------+--------------------+----------------------------+-----------------------------------------------------------+
