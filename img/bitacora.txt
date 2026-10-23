@@ -46,3 +46,19 @@ Dia 1 Reto 4
 | paginas/reservas.html (Subcarpeta)  | Inicio (index.html)| href="../index.html"       | Sube un nivel (../) para llegar a la raíz.                |
 | paginas/reservas.html (Subcarpeta)  | Página Tarifas     | href="tarifas.html"        | En la misma carpeta, se llama directamente.               |
 +-------------------------------------+--------------------+----------------------------+-----------------------------------------------------------+
+
+
+Dia 2 reto 3
+
+
+| ID | Campo Evaluado | Tipo de Prueba | Datos de Entrada | Resultado Esperado | Estado Inicial del Código / Comentario |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **01** | `html (lang)` | Sintaxis | `lang="es>` | **Error de renderizado** | Falta cerrar la comilla doble (`"`) en la línea 2. Rompe la estructura global. |
+| **02** | `nombre` | Sintaxis / Regex | `pattern="[A-Za-z...]+>` | **Formulario roto** | Falta cerrar la comilla doble (`"`) al final del patrón. Invalida los campos siguientes. |
+| **03** | `nombre` | Entrada Válida | `Juan Pérez` | **Aceptado** | Cumple con admitir solo letras con tildes y espacios. |
+| **04** | `nombre` | Entrada Inválida | `Carlos77` | **Bloqueado** | El navegador debe impedir el envío por contener caracteres numéricos. |
+| **05** | `documento` | Entrada Inválida | `123` | **Permitido erróneamente** | `minlength` no funciona en `type="number"`. El usuario puede enviar solo 3 dígitos. |
+| **06** | `celular` | Entrada Válida | `3004321221` | **Aceptado** | Inicia con el dígito 3 y tiene exactamente 10 caracteres de longitud. |
+| **07** | `celular` | Entrada Inválida | `4004321221` | **Bloqueado** | El navegador frena el envío porque el número no arranca con el dígito 3. |
+| **08** | `fecha` | Límite Temporal | `2026-10-25` | **Bloqueado** | No permite la selección de fechas anteriores al valor mínimo (`2026-11-01`). |
+
