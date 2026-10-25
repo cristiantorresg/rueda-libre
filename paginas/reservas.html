@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Reservas rueda libre</title>
 </head>
 <body>
     <header style="background-color: rgb(252, 206, 138);">
@@ -11,10 +11,11 @@
             <ul>
                 <li><a href="..\index.html">Inicio</a></li>
                 <li><a href="tarifas.html">Tarifas</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-             <img src="..\img\logo.png" alt="Logo de Rueda Libre" style="display: block; margin: 0 auto; width: 500px;">   
+                <li><a href="reservas.html">Reservas</a></li>  
             </ul>
+            
         </nav>
+        <img src="..\img\logo.png" alt="Logo de Rueda Libre" style="display: block; margin: 0 auto; width: 500px;"> 
     </header>
     <main>
     <h1>Reserva tu bicicleta</h1>
@@ -23,7 +24,7 @@
         <fieldset>
             <legend>Tus datos</legend>
             <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" required minlength="3" pattern="[A-Za-zÁéíóúÁÉÍÓÚñÑ ]+>
+            <input type="text" id="nombre" name="nombre" required minlength="3" pattern="[A-Za-zÁéíóúÁÉÍÓÚñÑ ]+>">
             <label for="documento">Documento de identificación</label>
             <input type="number" id="documento" name="documento" required minlength="6" maxlength="10">
             <label for="email"> Correo electronico</label>
@@ -65,8 +66,8 @@
         <option value="ruta2">Ruta 2</option>
         <option value="ruta3">Ruta 3</option>
         </select>
-        <label for="comentarios"> Comentarios </label>
-        <input type="text" id="comentarios" name="comentarios" maxlength="300" >
+        <label for="comentarios">Comentarios</label>
+        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300" placeholder="Escribe aquí tus comentarios adicionales."></textarea>
         </fieldset>
         <fieldset>
             <legend>Confirmación</legend>
@@ -76,8 +77,9 @@
         <button type="submit">Enviar información</button>
     
     </form>
-    <dl>
-        <h2>Horario atención</h2>
+    
+    <h2>Horario atención</h2>
+    <dl>    
     <dt>Lunes - Viernes </dt>   
     <dd>7:00 am a 7:00 pm</dd>
     <dt>sábados, domingos y festivos</dt>

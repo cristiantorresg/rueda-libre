@@ -62,3 +62,59 @@ Dia 2 reto 3
 | **07** | `celular` | Entrada Inválida | `4004321221` | **Bloqueado** | El navegador frena el envío porque el número no arranca con el dígito 3. |
 | **08** | `fecha` | Límite Temporal | `2026-10-25` | **Bloqueado** | No permite la selección de fechas anteriores al valor mínimo (`2026-11-01`). |
 
+
+Día 2 reto 4
+Auditoria de las 3 paginas
+Hallazgos index.html
+
+	1) Textos alternativos (alt): Noté que tenía una etiqueta que decía simplemente 	alt="imagen de bicicleta", lo cual es muy corto y no le dice mucho a un lector de 	pantalla. Lo mejor es hacerlo descriptivo, así que lo cambié por: alt="Bicicleta 	urbana de Rueda Libre para alquiler".
+
+	2)  Textos alternativos (alt): El mapa de ruta tenía el texto alt="Mapa de ruta", 	que estaba bien, pero sentí que le faltaba un poquito de contexto para ser más 	claro. Lo ideal es dejarlo como: alt="Mapa de ruta de los recorridos en bicicleta 	por Medellín".
+
+	3) Textos de enlace fuera de contexto: En el enlace del mapa puse originalmente 	"Consulta nuestra cobertura aqui". Como me di cuenta de que la palabra "aquí" sola 	no aporta información si alguien lee solo los enlaces de la página, lo cambié 	por 	un texto más completo: "Consulta nuestra zona de cobertura en Google Maps".
+
+Hallazgos tarifas.html
+
+	1) Título de la página incompleto: Noté que el <title> de esta página decía 	simplemente "Tarifas", lo cual es muy corto. Para darle mejor contexto al usuario y 	a los buscadores, lo ideal es complementarlo con la marca, quedando como "Tarifas 	Rueda Libre".
+
+	2) Textos alternativos (alt): El logotipo de la parte superior tenía la ruta 	corregida, pero el texto alternativo alt="Logo de Rueda Libre" estaba bien; sin 	embargo, revisé que mantuviera la consistencia exacta con las otras páginas del 	sitio para que los lectores de pantalla lo reconozcan igual.
+
+	3) Estructura de tabla: En la segunda tabla (la de tarifas de recorridos), noté que 	algunas etiquetas de fila (<tr>) abrían pero olvidé cerrarlas correctamente 	(</tr>), lo que confunde la lectura de la estructura en tablas para tecnologías 	asistivas. Específicamente pasó en las filas de "Río y Parques" y "Sabores de 	Barrio". Necesito cerrar cada <tr> adecuadamente para mantener la integridad 	de 	la tabla.
+
+Hallazgos reservas.html
+
+	1)Atributo lang incompleto en la etiqueta <html>: Noté que al abrir la etiqueta 	puse <html lang="es>, olvidando cerrar las comillas dobles. Esto puede ocasionar 	que el navegador y los lectores de pantalla no interpreten correctamente el 	idioma del documento.
+
+	2) Título de la página incompleto: El <title> de esta página decía solamente 	"Reservas". Para darle mejor contexto y consistencia con el resto del sitio, lo 	ideal es complementarlo como "Reservas rueda Libre".
+
+	3)Anidación incorrecta de etiquetas en el menú de navegación: Dentro de la etiqueta 	<nav> e incluso dentro de la lista <ul>, coloqué la imagen del logo (<img>). 	Semánticamente, las listas solo deben contener elementos <li>, por lo que el logo 	debería ir fuera de la lista o dentro de su propio contenedor en el encabezado.
+
+	4) Errores de sintaxis en atributos de entrada de formulario (<input>): En el campo 	del nombre completo (id="nombre"), el atributo pattern quedó con las comillas 	abiertas al final (pattern="[A-Za-zÁéíóúÁÉÍÓÚñÑ ]+>).
+
+
+Clasificación de contraste de colores sugeridos por el cliente
+
+	1)Blanco sobre Verde Ruta (#1E7A4F): Apta para texto normal y texto grande 	(relación de 5.31:1).
+
+	2)Blanco sobre Naranja Pedal (#F39A2B): No apta para texto normal ni grande 	(relación de 2.21:1).
+
+	3)Azul Noche (#14213D) sobre Naranja Pedal (#F39A2B): Apta para texto normal y 	texto grande (relación de 7.2:1).
+
+	4)Azul Noche (#14213D) sobre Crema (#FAF6EF): Apta para texto normal y texto 	grande (relación de 14.82:1).
+
+	5)Gris Asfalto (#5B6470) sobre Crema (#FAF6EF): Apta para texto normal y texto 	grande (relación de 5.56:1).
+
+	6)Blanco sobre Azul Noche (#14213D): Apta para texto normal y texto grande 	(relación de 15.97:1).
+
+
+Mapa de Uso de Color
+
+	Textos principales: Usaré Azul Noche (#14213D) o Gris Asfalto (#5B6470) sobre 	fondos claros (como el Crema (#FAF6EF)) para garantizar una lectura cómoda, sin 	fatiga visual y cumpliendo con los estándares WCAG.
+
+	Fondos: Usaré el color Crema (#FAF6EF) como fondo general para las páginas del 	sitio web por su suavidad, y reservaré el Azul Noche (#14213D) para bloques oscuros 	o el pie de página.
+
+	Botones: Utilizaré el Verde Ruta (#1E7A4F) con texto blanco para los botones de 	acción principal, asegurando un contraste totalmente apto y llamativo para los 	usuarios.
+
+	Enlaces: Usaré el Azul Noche (#14213D) para los hipervínculos, asegurando que 	destaquen claramente sobre los fondos claros y ofrezcan una excelente 	accesibilidad.
+
+
