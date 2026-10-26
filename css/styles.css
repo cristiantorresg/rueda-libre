@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-crema: #FAF6EF;
   --color-azul-noche: #14213D;
   --color-gris-asfalto: #5B6470;
   --color-verde-ruta: #1E7A4F;
   --color-blanco: #FFFFFF;
-  --color-crema: #FAF6EF;
   --color-naranja-pedal: #F39A2B;
   --font-titulos: 'Montserrat', sans-serif;
   --font-texto: 'Open Sans', sans-serif;
@@ -15,19 +20,40 @@
   --espaciado-md: 1rem;
   --espaciado-lg: 2rem;
 }
-header{
-    background-color: var(--color-naranja-pedal);
-}
 
 body {
   font-family: var(--font-texto);
   color: var(--color-gris-asfalto);
   background-color: var(--color-crema);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--color-naranja-pedal);
+  padding: var(--espaciado-md);
+}
+
+header img {
+  display: block;
+  margin: var(--espaciado-md) auto 0 auto;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-titulos);
   color: var(--color-azul-noche);
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: var(--espaciado-md);
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 
 #menu a { 
@@ -48,23 +74,128 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-azul-noche);
   background-color: var(--color-crema);
   outline: none;
+  border-radius: 4px;
 }
 
-.btn-accion {
+main {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: var(--espaciado-lg);
+  min-height: 80vh;
+}
+
+.portada-inicio {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tarjeta-servicio {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 8px;
+  padding: var(--espaciado-md);
+  margin-bottom: var(--espaciado-lg);
+}
+
+.tarjeta-servicio img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: var(--espaciado-sm);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--espaciado-lg);
+  background-color: var(--color-blanco);
+}
+
+th, td {
+  padding: var(--espaciado-md);
+  border: 1px solid var(--color-gris-asfalto);
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-azul-noche);
+  color: var(--color-blanco);
+  font-family: var(--font-titulos);
+}
+
+form {
+  background-color: var(--color-blanco);
+  padding: var(--espaciado-lg);
+  border-radius: 8px;
+  border: 1px solid var(--color-gris-asfalto);
+  max-width: 45rem;
+  margin: 0 auto var(--espaciado-lg) auto;
+}
+
+fieldset {
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 6px;
+  padding: var(--espaciado-md);
+  margin-bottom: var(--espaciado-md);
+}
+
+legend {
+  font-family: var(--font-titulos);
+  font-weight: 600;
+  color: var(--color-azul-noche);
+  padding: 0 var(--espaciado-sm);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--espaciado-sm);
+  font-weight: 600;
+  color: var(--color-azul-noche);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: var(--espaciado-sm);
+  margin-bottom: var(--espaciado-md);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 4px;
+  font-family: var(--font-texto);
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: var(--espaciado-sm);
+}
+
+.btn-accion,
+button[type="submit"] {
   display: inline-block;
   background-color: var(--color-verde-ruta);
   color: var(--color-blanco);
   font-family: var(--font-titulos);
   font-weight: 600;
-  padding: var(--espaciado-sm) var(--espaciado-lg);
+  padding: var(--espaciado-md) var(--espaciado-lg);
   text-decoration: none;
   border-radius: 4px;
-  border: 2px solid transparent;
+  border: none;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn-accion:hover,
-.btn-accion:focus {
+.btn-accion:focus,
+button[type="submit"]:hover,
+button[type="submit"]:focus {
   background-color: var(--color-azul-noche);
   color: var(--color-blanco);
   outline: none;

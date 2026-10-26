@@ -127,6 +127,16 @@ Reporte de Conflicto de Especificidad en DevTools:
 Causa del problema: Al inspeccionar los elementos en las DevTools, note que la regla de la clase .activo aparecía tachada. Esto ocurría porque el selector del compañero #menu a contenía un ID (#menu), el cual posee una jerarquía mucho mayor que una simple clase (.activo). Por la regla de la cascada y especificidad, el navegador ignoraba el color de la clase.
 
 
+Dia 3 reto 3
 
+Registro de Bitácora: Modelo de Caja y Medición en DevTools
+¿Qué hice?
+Me encargué de solucionar los problemas de diseño que hacían que la página se viera apretada y desordenada. Para lograrlo, apliqué la regla del modelo de caja universal (box-sizing: border-box) en todo el sitio, centré el contenido principal con un ancho máximo cómodo y le di una estructura limpia y ordenada a las tarjetas de servicio, las tablas y el formulario.
+
+Medición con Devtools
+
+Antes : Cuando inspeccioné una tarjeta en la pestaña Computed de DevTools, noté que aunque el ancho estaba configurado al 100%, al sumarle los espacios de relleno (padding) y los bordes, el ancho real terminaba desbordándose y descuadrando la pantalla.
+
+Después (Con box-sizing: border-box): Al activar esta propiedad, el navegador cambió la forma de calcular el espacio: ahora hace que el relleno y los bordes queden hacia adentro de la caja. Así logré que el ancho total se mantuviera exactamente en el 100% que necesitaba, evitando desbordamientos molestos y haciendo que todo se vea perfectamente alineado.
 
 
