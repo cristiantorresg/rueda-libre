@@ -32,8 +32,16 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--color-naranja-pedal);
   padding: var(--espaciado-md);
+}
+
+.titulo{
+  text-decoration: none;
 }
 
 header img {
@@ -55,7 +63,8 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--espaciado-md);
   padding: 0;
   margin: 0;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #menu a { 
@@ -245,4 +254,9 @@ select:focus {
   background-color: #1EBE5D;
   outline: 3px solid var(--color-azul-noche);
   outline-offset: 2px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
