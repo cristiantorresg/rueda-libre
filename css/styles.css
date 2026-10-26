@@ -16,7 +16,7 @@
   --espaciado-lg: 2rem;
 }
 header{
-    background-color: var(--color-crema);
+    background-color: var(--color-naranja-pedal);
 }
 
 body {
@@ -28,4 +28,51 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-titulos);
   color: var(--color-azul-noche);
+}
+
+#menu a { 
+  color: var(--color-gris-asfalto); 
+  text-decoration: none;
+  font-family: var(--font-titulos);
+  padding: var(--espaciado-sm) var(--espaciado-md);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menu a.activo { 
+  color: var(--color-verde-ruta); 
+  font-weight: 600; 
+}
+
+#menu a:hover,
+#menu a:focus {
+  color: var(--color-azul-noche);
+  background-color: var(--color-crema);
+  outline: none;
+}
+
+.btn-accion {
+  display: inline-block;
+  background-color: var(--color-verde-ruta);
+  color: var(--color-blanco);
+  font-family: var(--font-titulos);
+  font-weight: 600;
+  padding: var(--espaciado-sm) var(--espaciado-lg);
+  text-decoration: none;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease;
+}
+
+.btn-accion:hover,
+.btn-accion:focus {
+  background-color: var(--color-azul-noche);
+  color: var(--color-blanco);
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--color-verde-ruta);
+  outline-offset: 2px;
 }

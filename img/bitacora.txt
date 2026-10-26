@@ -118,3 +118,15 @@ Mapa de Uso de Color
 	Enlaces: Usaré el Azul Noche (#14213D) para los hipervínculos, asegurando que 	destaquen claramente sobre los fondos claros y ofrezcan una excelente 	accesibilidad.
 
 
+Día 3 reto 2
+
+
+Reporte de Conflicto de Especificidad en DevTools:
+
+
+Causa del problema: Al inspeccionar los elementos en las DevTools, note que la regla de la clase .activo aparecía tachada. Esto ocurría porque el selector del compañero #menu a contenía un ID (#menu), el cual posee una jerarquía mucho mayor que una simple clase (.activo). Por la regla de la cascada y especificidad, el navegador ignoraba el color de la clase.
+
+
+
+
+
