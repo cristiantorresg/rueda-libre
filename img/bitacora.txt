@@ -140,3 +140,18 @@ Antes : Cuando inspeccioné una tarjeta en la pestaña Computed de DevTools, not
 Después (Con box-sizing: border-box): Al activar esta propiedad, el navegador cambió la forma de calcular el espacio: ahora hace que el relleno y los bordes queden hacia adentro de la caja. Así logré que el ancho total se mantuviera exactamente en el 100% que necesitaba, evitando desbordamientos molestos y haciendo que todo se vea perfectamente alineado.
 
 
+Dia 3 reto 4
+Registro de Bitácora: Lanzamiento de la Versión 1.0
+¿Qué construí a lo largo de los MiniRetos de la semana?
+
+MiniReto 1 (Estructura HTML): Construí la estructura semánticos de las tres páginas (index.html, tarifas.html y reservas.html), organizando encabezados, navegación, tablas de precios y un formulario de reservas completo y accesible.
+
+MiniReto 2 (Estilos base y tipografías): Integre los tipos de letra de Google Fonts (Montserrat y Open Sans), configuré la paleta de colores corporativa a través de variables CSS (:root) y estilicé los menús y botones principales.
+
+MiniReto 3 (Modelo de caja y distribución): Solucioné los problemas de desbordamiento aplicando el modelo de caja universal (box-sizing: border-box), centré el contenido principal usando anchos máximos en rem y le di forma de tarjetas estructuradas a los servicios.
+
+MiniReto 4 (Posicionamiento y Versión 1.0): Implementé posicionamiento avanzado con position: relative y absolute para colocar la etiqueta "Nuevo" en la tarjeta de bicicletas eléctricas sin alterar el flujo del texto, y añadí un botón flotante con position: fixed para el canal de atención por WhatsApp accesible en todo momento mediante teclado y sin tapar contenido. Finalmente, validé el sitio y realicé la publicación oficial en GitHub Pages.
+
+¿Qué mejoraría en el futuro?
+Me gustaría implementar un diseño totalmente adaptable o responsive para que la visualización sea correcta en cualquier dispositivo.
+

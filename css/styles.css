@@ -27,6 +27,8 @@ body {
   background-color: var(--color-crema);
   margin: 0;
   padding: 0;
+  position: relative;
+  padding-bottom: 4rem;
 }
 
 header {
@@ -97,6 +99,7 @@ main {
   border-radius: 8px;
   padding: var(--espaciado-md);
   margin-bottom: var(--espaciado-lg);
+  position: relative;
 }
 
 .tarjeta-servicio img {
@@ -105,6 +108,19 @@ main {
   display: block;
   border-radius: 4px;
   margin-bottom: var(--espaciado-sm);
+}
+
+.etiqueta-nuevo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--color-naranja-pedal);
+  color: var(--color-blanco);
+  font-family: var(--font-titulos);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
 }
 
 table {
@@ -205,5 +221,28 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: 3px solid var(--color-verde-ruta);
+  outline-offset: 2px;
+}
+
+.flotante-whatsapp {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #25D366;
+  color: var(--color-blanco);
+  font-family: var(--font-titulos);
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.flotante-whatsapp:hover,
+.flotante-whatsapp:focus {
+  background-color: #1EBE5D;
+  outline: 3px solid var(--color-azul-noche);
   outline-offset: 2px;
 }
