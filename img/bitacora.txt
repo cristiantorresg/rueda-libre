@@ -165,4 +165,21 @@ Al reducir el ancho de la pantalla, los enlaces del menú dejan de estar alinead
 Los tres bloques de información (Encuéntranos, Contacto y Horarios) se reorganizan de manera fluida. Al estrecharse la ventana, el contenido ya no choca contra los bordes gracias al nuevo padding lateral. Los bloques van saltando uno debajo del otro de forma limpia y ordenada, manteniendo los textos de contacto apilados verticalmente en cualquier tamaño.
 
 
+Dia 1, reto 2
+
+¿Qué se hizo hoy?
+
+Monté la sección de "Nuestra flota" con su encabezado y las tarjetas de los modelos usando HTML. El reto principal era armar una cuadrícula completamente automática y responsiva (sin usar media queries) y lograr que los botones de reserva se quedaran alineados abajo del todo, sin importar el largo de los textos de descripción. También sumé el séptimo modelo (Tándem) para poner a prueba el comportamiento dinámico.
+Proceso y aprendizaje:
+Al principio el grid no se mostraba bien. Con ayuda de gemini, encontré un par de errores clave: tenía un problema con los hijos directos porque había puesto el grid en la sección general y no en el contenedor real de las tarjetas, y además tenía líneas duplicadas en el CSS.
+Aprendí a usar la regla grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));. Ahora entiendo cómo el navegador calcula solo cuántas tarjetas caben según el espacio y cómo el minmax cuida que no se aplasten. Para los textos de los párrafos, los centré y les di un margen equilibrado, y usé margin-top: auto en los botones para mandarlos al fondo de cada tarjeta Flexbox.
+
+Resultados en las DevTools:
+
+Al probar el comportamiento en el modo dispositivo de las DevTools, verifiqué que todo funciona en automático:
+	• A 1280px se ven 3 columnas.
+	• A 900px se acomodan en 2 columnas.
+	• A 500px bajan limpiamente a 1 columna.
+
+
 
