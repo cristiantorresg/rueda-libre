@@ -33,11 +33,11 @@ body {
 
 header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-naranja-pedal);
   padding: var(--espaciado-md);
+  flex-wrap: wrap;
 }
 
 .titulo{
@@ -62,9 +62,9 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: var(--espaciado-md);
   padding: 0;
-  margin: 0;
-  justify-content: space-between;
+  margin: 0; 
   flex-wrap: wrap;
+  align-items: center;
 }
 
 #menu a { 
@@ -259,4 +259,33 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding-left: var(--espaciado-md);
+  padding-right: var(--espaciado-md);
 }
+
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;   
+    justify-content: center;   
+    text-align: center;       
+    gap: var(--espaciado-md); 
+    padding-left: var(--espaciado-md);
+    padding-right: var(--espaciado-md);
+  }
+
+  #menu {
+    justify-content: center; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;             
+    width: 100%;   
+  }
+}
+
+.contacto {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+

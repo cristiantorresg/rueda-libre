@@ -155,3 +155,14 @@ MiniReto 4 (Posicionamiento y Versión 1.0): Implementé posicionamiento avanzad
 ¿Qué mejoraría en el futuro?
 Me gustaría implementar un diseño totalmente adaptable o responsive para que la visualización sea correcta en cualquier dispositivo.
 
+Semana 2
+Dia 1, reto 1
+
+¿Qué ocurre al estrechar la ventana del navegador?
+-En el encabezado (Header):
+Al reducir el ancho de la pantalla, los enlaces del menú dejan de estar alineados a la derecha del título. Gracias a flex-wrap: wrap, el bloque del menú salta automáticamente debajo de "Rueda libre". En pantallas muy pequeñas, entra en acción la Media Query, haciendo que el título y los enlaces se acomoden de forma vertical y queden perfectamente centrados.
+- En el pie de página (Footer):
+Los tres bloques de información (Encuéntranos, Contacto y Horarios) se reorganizan de manera fluida. Al estrecharse la ventana, el contenido ya no choca contra los bordes gracias al nuevo padding lateral. Los bloques van saltando uno debajo del otro de forma limpia y ordenada, manteniendo los textos de contacto apilados verticalmente en cualquier tamaño.
+
+
+
