@@ -180,6 +180,15 @@ Al probar el comportamiento en el modo dispositivo de las DevTools, verifiqué q
 	• A 1280px se ven 3 columnas.
 	• A 900px se acomodan en 2 columnas.
 	• A 500px bajan limpiamente a 1 columna.
+	
+	
+Día 1, Reto 3
+
+El día de hoy creé en el inicio una nueva sección llamada "Nuestras rutas" con tres tarjetas en una fila, lo hice con flexbox ya que solo necesitaba que tuviese una dimensión.
+Adicionalmente puse una imagen paralela al texto de inicio de la pagina, lo cual hice tambien con flexbox para que quedara la imagen a la derecha del texto.
+Tambien, puse en el formulario de reserva dos datos alineados horizontalmente: el nombre y documento, para que quedaran en una sola fila.
+Por ultimo, puse una información de contacto al lado de el formulario de reserva, el cual hice tambien con flexbox porque solo necesitaba una sola dimensión.
+
 
 
 
