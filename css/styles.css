@@ -95,10 +95,20 @@ main {
   min-height: 80vh;
 }
 
+.grid-inicio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tarjeta.inicio {
+  display: flex;
+  justify-content: center;
+}
+
 .portada-inicio {
   min-height: 60vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  
   justify-content: center;
 }
 
