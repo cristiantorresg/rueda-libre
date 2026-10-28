@@ -189,6 +189,11 @@ Adicionalmente puse una imagen paralela al texto de inicio de la pagina, lo cual
 Tambien, puse en el formulario de reserva dos datos alineados horizontalmente: el nombre y documento, para que quedaran en una sola fila.
 Por ultimo, puse una información de contacto al lado de el formulario de reserva, el cual hice tambien con flexbox porque solo necesitaba una sola dimensión.
 
+Dia 1, Reto 4
+
+Se realizó la adaptación del sitio de rueda libre para que sea first mobile, adicionalmente se creo los media querys tanto para navegador (1280px) como para tablet (768px), esto permite que la pagina funcione visualmente de manera correcta sin que se oculte información por ejemplo de las tablas y que se adapte a todo tipo de pantallas. Las pruenas realizadas a distintas resoluciones fueron satisfactorias ya que el contenido se adapta y no se deforma de manera que se oculte información.
+
+
 
 
 

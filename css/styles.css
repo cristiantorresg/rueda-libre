@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. IMPORTACIONES, VARIABLES & RESET
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *,
@@ -21,6 +24,9 @@
   --espaciado-lg: 2rem;
 }
 
+/* ==========================================================================
+   2. ESTILOS BASE Y TIPOGRAFÍA
+   ========================================================================== */
 body {
   font-family: var(--font-texto);
   color: var(--color-gris-asfalto);
@@ -31,17 +37,28 @@ body {
   padding-bottom: 4rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titulos);
+  color: var(--color-azul-noche);
+}
+
+.titulo {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   3. HEADER Y NAVEGACIÓN (Mobile-First: 1 columna vertical)
+   ========================================================================== */
 header {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  gap: var(--espaciado-md);
   background-color: var(--color-naranja-pedal);
   padding: var(--espaciado-md);
   flex-wrap: wrap;
-}
-
-.titulo{
-  text-decoration: none;
 }
 
 header img {
@@ -52,32 +69,30 @@ header img {
   height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-titulos);
-  color: var(--color-azul-noche);
-}
-
 #menu {
   list-style: none;
   display: flex;
-  gap: var(--espaciado-md);
-  padding: 0;
-  margin: 0; 
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-#menu a { 
-  color: var(--color-gris-asfalto); 
+#menu a {
+  color: var(--color-gris-asfalto);
   text-decoration: none;
   font-family: var(--font-titulos);
   padding: var(--espaciado-sm) var(--espaciado-md);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#menu a.activo { 
-  color: var(--color-verde-ruta); 
-  font-weight: 600; 
+#menu a.activo {
+  color: var(--color-verde-ruta);
+  font-weight: 600;
 }
 
 #menu a:hover,
@@ -88,6 +103,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
+/* ==========================================================================
+   4. ESTRUCTURA Y LAYOUT GENERAL (Mobile-First: 1 sola columna)
+   ========================================================================== */
 main {
   max-width: 65rem;
   margin: 0 auto;
@@ -95,40 +113,59 @@ main {
   min-height: 80vh;
 }
 
-.grid-inicio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: space-between;
-}
-
-
-  
-
-
-.tarjeta.inicio {
-  display: flex;
-  justify-content: space-between;
-}
-
-#imagen-portada{
-  width: 90%;
-
-}
-#imagen-nuestros-servicios {
-  width: 40%;
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
-
 .portada-inicio {
   min-height: 60vh;
   display: grid;
-  
   justify-content: center;
 }
 
+/* Por defecto en móvil: 1 sola columna */
+.grid-inicio,
+.rutas-guiadas,
+.grid-flota {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tarjeta.inicio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-md);
+}
+
+#imagen-portada {
+  width: 100%;
+}
+
+#imagen-nuestros-servicios {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.cobertura {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contenedor-reservas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contenedor-nombre-documento {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   5. TARJETAS Y COMPONENTES
+   ========================================================================== */
 .tarjeta-servicio {
   background-color: var(--color-blanco);
   border: 1px solid var(--color-gris-asfalto);
@@ -137,78 +174,6 @@ main {
   margin-bottom: var(--espaciado-lg);
   position: relative;
 }
-
-.cobertura{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-.rutas-guiadas{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px; 
-    justify-content: center;
-}
-
-.contenedor-reservas {
-  display: flex;
-    justify-content: space-between;
-    gap: 30px;
-
-    
-}
-
-
-.tarjeta-rutas-guiadas{
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-gris-asfalto);
-  border-radius: 8px;
-  padding: var(--espaciado-md);
-  margin-bottom: var(--espaciado-lg);
-  align-items: center;
-  gap: 1px;
-}
-.tarjeta-contacto {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-gris-asfalto);
-  border-radius: 8px;
-  
-}
-
-.grid-flota {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px; 
-    justify-content: center;
-}
-.contenedor-nombre-documento {
-  display: flex;
-  gap: 20px;
-
-}
-.imagen-nuestra-flota{
-  width: 70%;
-  
-}
-.tarjeta-nuestra-flota {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-gris-asfalto);
-  border-radius: 8px;
-  padding: var(--espaciado-md);
-  margin-bottom: var(--espaciado-lg);
-  align-items: center;
-  gap: 1px;
-  
-
-}
-
-
 
 .tarjeta-servicio img {
   width: 100%;
@@ -231,15 +196,61 @@ main {
   border-radius: 20px;
 }
 
+.tarjeta-rutas-guiadas {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 8px;
+  padding: var(--espaciado-md);
+  margin-bottom: var(--espaciado-lg);
+  align-items: center;
+  gap: 1px;
+}
+
+.tarjeta-contacto {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 8px;
+}
+
+.contacto {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tarjeta-nuestra-flota {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 8px;
+  padding: var(--espaciado-md);
+  margin-bottom: var(--espaciado-lg);
+  align-items: center;
+  gap: 1px;
+}
+
+.imagen-nuestra-flota {
+  width: 70%;
+}
+
+/* ==========================================================================
+   6. TABLAS (Ajustadas para móvil sin scroll horizontal)
+   ========================================================================== */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: var(--espaciado-lg);
   background-color: var(--color-blanco);
+  font-size: 0.85rem; /* Letra ajustada en móvil */
 }
 
 th, td {
-  padding: var(--espaciado-md);
+  padding: 0.5rem 0.35rem; /* Relleno compacto en móvil */
   border: 1px solid var(--color-gris-asfalto);
   text-align: left;
 }
@@ -250,6 +261,9 @@ th {
   font-family: var(--font-titulos);
 }
 
+/* ==========================================================================
+   7. FORMULARIOS
+   ========================================================================== */
 form {
   background-color: var(--color-blanco);
   padding: var(--espaciado-lg);
@@ -301,6 +315,16 @@ input[type="checkbox"] {
   margin-right: var(--espaciado-sm);
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--color-verde-ruta);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   8. BOTONES Y FOOTER
+   ========================================================================== */
 .btn-accion,
 button[type="submit"] {
   display: inline-block;
@@ -326,13 +350,6 @@ button[type="submit"]:focus {
   outline: none;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 3px solid var(--color-verde-ruta);
-  outline-offset: 2px;
-}
-
 .flotante-whatsapp {
   position: fixed;
   bottom: 1.5rem;
@@ -355,6 +372,7 @@ select:focus {
   outline: 3px solid var(--color-azul-noche);
   outline-offset: 2px;
 }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -363,29 +381,81 @@ footer {
   padding-right: var(--espaciado-md);
 }
 
-@media (max-width: 576px) {
+/* ==========================================================================
+   9. ADAPTACIÓN A TABLET Y ESCRITORIO (RESTAURACIÓN ORIGINAL EXACTA)
+   ========================================================================== */
+@media (min-width: 577px) {
+  /* Header y menú original horizontal */
   header {
-    flex-direction: column;   
-    justify-content: center;   
-    text-align: center;       
-    gap: var(--espaciado-md); 
-    padding-left: var(--espaciado-md);
-    padding-right: var(--espaciado-md);
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: var(--espaciado-md);
   }
 
   #menu {
-    justify-content: center; 
-    flex-direction: column; 
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    gap: var(--espaciado-md);
+  }
+
+  /* Grids originales con auto-fit */
+  .grid-inicio {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .rutas-guiadas {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .grid-flota {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* Layouts de portada, reservas e imágenes originales */
+  .tarjeta.inicio {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #imagen-portada {
+    width: 90%;
+  }
+
+  #imagen-nuestros-servicios {
+    width: 40%;
+    justify-content: center;
     align-items: center;
-    gap: 10px;             
-    width: 100%;   
+  }
+
+  .cobertura {
+    width: 30%;
+  }
+
+  .contenedor-reservas {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .contenedor-nombre-documento {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  /* Tabla restaura su tamaño y relleno normal */
+  table {
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: var(--espaciado-md);
   }
 }
-
-.contacto {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
-}
-
