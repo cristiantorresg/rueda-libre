@@ -152,9 +152,9 @@ main {
 }
 
 .contenedor-reservas {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: start;
 }
 
 .contenedor-nombre-documento {
