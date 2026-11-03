@@ -197,6 +197,21 @@ Día 2, Reto 1
 
 Para este minireto, trabajé en recrear la sección "nuestras rutas" con bootstrap.Me tardé en css aproximadamente 1 hora en realizarla, entendiendo como funcionaba las tarjetas y contenedores flex, grid; Mientras con bootstrap, me tardé aproximadamente 1 hora y media mientras entendia como funcionaba bootstrap. En la ejecución; luego de entender bootstrap, me tardé menos ya que gracias a los breakpoints con solo una linea en cada tarjeta, podía rapidamente hacerlos responsive y first:mobile, sin necesidad de media querys.
 
+Día 2, Reto 2
+En este minireto, creé una sección nueva llamada "Por qué Rueda libre?" y una franja final con texto y un enlace destacado en columna en celulares y en fila desde md. La franja final tiene una imagen decorativa que se oculta en celulares pero desde md se muestra la imagen. 
+	
+Cinco clases que usé el día de hoy:
+	
+	row: Define un contenedor de fila dentro del sistema de cuadrícula (grid), permitiendo alinear y organizar columnas hijas mediante Flexbox.
+	
+	col-lg-3: Establece el ancho de una columna en pantallas grandes (large, $\ge 992\text{px}$), ocupando 3 de las 12 columnas disponibles (es decir, una disposición de 4 elementos por fila).
+	
+	d-flex: Aplica la propiedad display: flex; para crear un contenedor flexible, habilitando utilidades como alineación y distribución de elementos.
+	
+	text-bg-dark: Aplica simultáneamente un fondo oscuro de contraste y un color de texto claro legible para ese fondo.
+	
+	fw-bold: Modifica el grosor tipográfico aplicando font-weight: 700 (negrita).
+
 
 
 
