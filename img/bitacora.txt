@@ -193,6 +193,10 @@ Dia 1, Reto 4
 
 Se realizó la adaptación del sitio de rueda libre para que sea first mobile, adicionalmente se creo los media querys tanto para navegador (1280px) como para tablet (768px), esto permite que la pagina funcione visualmente de manera correcta sin que se oculte información por ejemplo de las tablas y que se adapte a todo tipo de pantallas. Las pruenas realizadas a distintas resoluciones fueron satisfactorias ya que el contenido se adapta y no se deforma de manera que se oculte información.
 
+Día 2, Reto 1
+
+Para este minireto, trabajé en recrear la sección "nuestras rutas" con bootstrap.Me tardé en css aproximadamente 1 hora en realizarla, entendiendo como funcionaba las tarjetas y contenedores flex, grid; Mientras con bootstrap, me tardé aproximadamente 1 hora y media mientras entendia como funcionaba bootstrap. En la ejecución; luego de entender bootstrap, me tardé menos ya que gracias a los breakpoints con solo una linea en cada tarjeta, podía rapidamente hacerlos responsive y first:mobile, sin necesidad de media querys.
+
 
 
 
